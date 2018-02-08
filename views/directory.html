@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="col-md-12">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Position</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="person in persons">
+                    <th scope="row">{{$index+1}}</th>
+                    <td class="text-capitalize">{{person.name}}</td>
+                    <td class="text-capitalize">{{person.job}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="clearfix"></div>
+    <div class="alert alert-{{message.type}}" ng-show="message" role="alert">
+        {{message.result}}
+    </div>
+    <div class="col-md-12 mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Add a new person</h5>
+                <form ng-submit="addPerson(newPerson)">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="exampleInputEmail1">Nome</label>
+                            <input type="text" class="form-control" ng-model="newPerson.name" placeholder="Enter new person name">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="exampleInputPassword1">Job Title</label>
+                            <input type="text" class="form-control" ng-model="newPerson.job" placeholder="Enter person job title">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-right">
+                                <button type="submit" class="btn btn-primary">Add person</button>
+                        </div>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+    
+</div>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <title>People Directory</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+        <script src="node_modules/popper.js/dist/popper.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+        <script src="js/vendor.bundle.js"></script>
+        <script src="js/app.bundle.js"></script>
+        
+    </head>
+    <body ng-app="directoryApp">
+        <div class="container" ng-controller="PeopleController">
+            <br />
+            <h3 class="col-md-12 mb-5">People Directory</h3>
+            <directory class="md-12" persons={persons} add-person={addPerson(person)} message={message}></directory>
+        <!-- <div ng-controller="PeopleController">
+            <code>{{customers}}</code>
+        </div> -->
+        </div>
+    </body>
+</html>
