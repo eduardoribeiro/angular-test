@@ -89,7 +89,7 @@ function init($scope) {
         
         if(exists > 0) {
             $scope.message = {
-                type: 'warning',
+                type: 'danger',
                 result: person.name + ' is already on the list'
             }
         } else {
